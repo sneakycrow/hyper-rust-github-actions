@@ -254,7 +254,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "hyper-rust-test"
+name = "hyper-rust-github-actions"
 version = "0.1.0"
 dependencies = [
  "hyper 0.12.35 (registry+https://github.com/rust-lang/crates.io-index)",
