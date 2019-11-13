@@ -9,14 +9,11 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build
       run: cargo build --verbose
-    - shell: bash
-      run: |
-        ls -a ./target
     - name: Upload build
       uses: actions/upload-artifact@v1
       with:
         name: build_binary
-        path: ./target/hyper-rust-github-actions
+        path: ./target/debug/hyper-rust-github-actions
 
   deploy:
     name: Deploy to Remote
