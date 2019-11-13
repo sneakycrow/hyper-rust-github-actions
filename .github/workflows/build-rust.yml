@@ -27,3 +27,12 @@ jobs:
       - shell: bash
         run: |
           ls -a
+      - name: action-slack
+        uses: 8398a7/action-slack@v2.4.2
+        with:
+          author_name: Zachs Test Action Author
+          status: ${{ job.status }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+
