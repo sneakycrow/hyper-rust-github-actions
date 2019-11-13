@@ -30,10 +30,26 @@ jobs:
       - name: action-slack
         uses: 8398a7/action-slack@v2.4.2
         with:
-          status: ${{ job.status }}
-          author_name: dev_test deployment integration!
-          text: "A deployment has been made! :confetti_ball:"
+          status: custom
           mention: channel
+          payload: |
+            {
+              text: "New Deployment! :confetti_ball: :zach:",
+              attachments: [{
+                "author_name": "Zachs Github Action Deployment Integration",
+                fallback: 'fallback',
+                color: 'good',
+                title: 'CI Result',
+                text: 'Succeeded',
+                fields: [{
+                  title: 'lower case',
+                  value: 'LOWER CASE CHECK'.toLowerCase(),
+                  short: true
+                }],
+                actions: [{
+                }]
+              }]
+            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
