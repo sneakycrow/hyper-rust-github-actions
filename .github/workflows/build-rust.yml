@@ -42,9 +42,8 @@ jobs:
                 title: 'CI Result',
                 text: 'Succeeded',
                 fields: [{
-                  title: 'lower case',
-                  value: 'LOWER CASE CHECK'.toLowerCase(),
-                  short: true
+                  title: 'Is it on staging?',
+                  value: 'hell yea it is',
                 }],
                 actions: [{
                 }]
