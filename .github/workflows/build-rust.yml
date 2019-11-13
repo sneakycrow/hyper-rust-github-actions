@@ -32,6 +32,9 @@ jobs:
         with:
           author_name: Zachs Test Action Author
           status: ${{ job.status }}
+          icon_emoji: confetti_ball
+          text: A deployment has been made!
+          mention: channel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
