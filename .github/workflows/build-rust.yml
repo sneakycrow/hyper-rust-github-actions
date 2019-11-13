@@ -33,7 +33,7 @@ jobs:
           status: ${{ job.status }}
           author_name: dev_test deployment integration!
           text: "A deployment has been made! :confetti_ball:"
-          mention: zach
+          mention: channel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
