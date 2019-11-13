@@ -31,10 +31,10 @@ jobs:
         uses: 8398a7/action-slack@v2.4.2
         with:
           status: custom
-          mention: channel
           payload: |
             {
               text: "New Deployment! :confetti_ball: :zach:",
+              mention: "channel",
               attachments: [{
                 "author_name": "Zachs Github Action Deployment Integration",
                 fallback: 'fallback',
