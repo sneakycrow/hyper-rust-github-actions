@@ -30,10 +30,8 @@ jobs:
       - name: action-slack
         uses: 8398a7/action-slack@v2.4.2
         with:
-          author_name: Zachs Test Action Author
-          status: ${{ job.status }}
-          icon_emoji: confetti_ball
-          text: A deployment has been made!
+          author_name: dev_test deployment integration!
+          text: "A deployment has been made! :confetti_ball:"
           mention: channel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
